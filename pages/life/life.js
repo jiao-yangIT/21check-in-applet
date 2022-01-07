@@ -16,7 +16,6 @@ Page({
      * 页面相关事件处理函数--监听用户下拉动作
      */
   onPullDownRefresh: function () {
-    console.log(111,"下拉");
     wx.showNavigationBarLoading();
     that.setData({ page: 10, refresh: false })
     that.onLoad()
@@ -52,7 +51,7 @@ Page({
     })
     this.animationUp = animationUp
   },
-  
+
   onUpTap: function (event) {
     var newData = this.dbPost.up();
     this.setData({
@@ -121,13 +120,13 @@ Page({
         })
         if (that.data.page == 10) {
           wx.hideNavigationBarLoading();
-          // 停止下拉动作  
+          // 停止下拉动作
           wx.stopPullDownRefresh();
         } else {
           wx.hideLoading()
         }
         console.log(111, "下拉");
-        // The object was retrieved successfully.        
+        // The object was retrieved successfully.
       },
       error: function (result, error) {
         console.log("查询失败");
