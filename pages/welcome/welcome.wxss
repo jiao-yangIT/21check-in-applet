@@ -1,0 +1,35 @@
+page{
+  /* background-color:#C6E2FF; */
+  background: -webkit-linear-gradient(top, #C6E2FF,#46A4EC);
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.avator{
+  width:200rpx;
+  height: 200rpx;
+  margin-top: 150rpx;
+  border-radius: 100%;
+  margin-bottom: 40rpx;
+}
+.content{
+  color:#666699;
+  font-size: 35rpx;
+  margin: 30rpx;
+  font-weight: bold;
+  line-height: 60rpx;  
+}
+.jump{
+  border: 5rpx solid #666699;
+  margin-top: 70rpx;
+  padding: 10rpx;
+  font-size: 40rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  color: #666666;
+  font-weight: bolder;
+  box-shadow: 5rpx 5rpx 5rpx teal;
+}

@@ -1,0 +1,37 @@
+{
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "",
+          "pathName": "pages/welcome/welcome",
+          "query": "",
+          "scene": null,
+          "partialCompile": {
+            "enabled": false,
+            "pages": [
+              "pages/life/life",
+              "pages/think/think",
+              "pages/habit/addhabit/addhabit",
+              "pages/mine/mine",
+              "pages/habit/join/join",
+              "pages/mine/feedback/feedback",
+              "pages/index/index",
+              "pages/mine/device/device",
+              "pages/life/lifedetail/detail"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

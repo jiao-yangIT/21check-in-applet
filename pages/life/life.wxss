@@ -1,0 +1,111 @@
+swiper {
+  width: 100%;
+  height: 400rpx;
+}
+
+swiper image {
+  width: 100%;
+  height: 400rpx;
+}
+
+.jingxuan {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1rpx solid rgb(102, 99, 99);
+}
+
+.content {
+  padding: 40rpx 10rpx 20rpx 10rpx;
+}
+
+.content image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.life-container {
+  flex-direction: column;
+  display: flex;
+  margin: 20rpx 0 40rpx 0rpx;
+  background-color: rgb(243, 226, 204);
+  border-bottom: 1px solid #666;
+  border-top: 1px solid #666;
+  padding-bottom: 5px;
+  padding: 20rpx;
+}
+
+.life-author-date {
+  margin-top: 10rpx;
+  display: flex;
+}
+
+.life-author-date .pic {
+  width: 130rpx;
+  height: 130rpx;
+}
+
+.life-author-date .name {
+  padding: 10rpx;
+}
+
+.life-author-date .date {
+  padding: 25rpx 10rpx;
+}
+
+.cat-content {
+  padding: 10rpx 100rpx;
+}
+
+.contentimg {
+  margin-left: 100rpx;
+  width:300rpx;
+  height: 200rpx;
+  align-items: center;
+  
+}
+
+.life-image {
+  width: 100%;
+  height: 340rpx;
+  /* margin-bottom: 15px; */
+}
+
+.life-date {
+  font-size: 26rpx;
+  margin-bottom: 10px;
+}
+
+.life-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: brown;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.life-content {
+ display: flex;
+ flex-direction: column;
+ justify-items: center;
+}
+
+.life-like {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  font-size: 13px;
+  line-height: 16px;
+  margin-left: 10px;
+  align-items: center;
+}
+
+.life-like image {
+  height: 16px;
+  width: 16px;
+  margin-right: 8px;
+}
+
+.life-like text {
+  margin-right: 20px;
+}

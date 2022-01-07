@@ -1,0 +1,43 @@
+<view class='container'>
+  <view class="sign">
+    <text>今天</text>
+    <button wx:if="{{date!=signData[date]}}" class="signcheck" bindtap="sign">点击签到</button>
+    <button wx:else="" class="signcheck" disabled='true'>今日已签</button>
+  </view>
+  <view class="think" bindtap='think'>今日感想</view>
+  <view class='time'>
+    <view>
+      <text class="title">{{year}}</text>年
+      <text class="title">{{month}}</text>月
+    </view>
+    <view class="signdate">
+      本月已签到
+      <text class="day">{{signDay}}</text>天
+    </view>
+  </view>
+  <view class="calendar" calendar-style="calendar" header-style="calendar-header" board-style="calendar-board" days-color="{{dayStyle}}" weeks-type="cn" binddayClick="dayClick">
+    <view class="weekName">
+      <view class="sunday">日</view>
+      <view class="monday">一</view>
+      <view class="tuesday">二</view>
+      <view class="wednesday">三</view>
+      <view class="thursday">四</view>
+      <view class="friday">五</view>
+      <view class="saturday">六</view>
+    </view>
+    <view class="week">
+      <!--填补空格-->
+      <view wx:for="{{nbsp}}">\n</view>
+      <!--开心循环日期-->
+      <view wx:for="{{date-1}}" class="bfsign">
+        <text wx:if="{{item+1==signData[item+1]}}" class="fsign">已签到</text>
+        <text wx:else="">{{item+1}}</text>
+      </view>
+      <view class="afsign">
+        <text wx:if="{{date==signData[date]}}">已签到</text>
+        <text wx:else="" style=' color:blue;background:red;border-radius:30rpx;'>{{date}}</text>
+      </view>
+      <view wx:for="{{monthDaySize-date}}">{{item+date+1}}</view>
+    </view>
+  </view>
+</view>

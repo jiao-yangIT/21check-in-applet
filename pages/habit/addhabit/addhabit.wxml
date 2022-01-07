@@ -1,0 +1,178 @@
+<view class='body'>
+  <!-- <view class='search'>
+    <input type="search" placeholder='请输入想创建的习惯' bindconfirm='toSearch' />
+    <image src="https://img.icons8.com/color/2x/search.png" class='img' bindtap="toSearch"></image>
+  </view> -->
+  <view>
+    <view class="swiper-tab">
+      <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">热门</view>
+      <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">运动</view>
+      <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">学习</view>
+      <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">健康</view>
+      <view class="swiper-tab-list {{currentTab==4 ? 'on' : ''}}" data-current="4" bindtap="swichNav">生活</view>
+    </view>
+    <swiper current="{{currentTab}}" class="swiper-box" duration="300" bindchange="bindChange">
+      <!-- style="height:{{winHeight - 31}}px" -->
+      <view wx:for="{{syncjoin}}" wx:key="" data-id='{{index}}' bindtap='gojoin' class='view-item'>
+        <view class='images'>{{item.habiticon}}</view>
+        <text class='text'>{{item.habitname}}</text>
+        <view class='line'></view>
+      </view>
+      <swiper-item>
+        <view class="content" bindtap='daka'>
+          <image src="../../../images/habit/getup.png"></image>
+          早起
+        </view>
+        <view class="content" bindtap='daka'>
+          <image src="../../../images/habit/sleep.png"></image>
+          早睡
+        </view>
+        <!-- <view class="content">
+          <image src="../../../images/habit/running.png"></image>
+          晨跑
+        </view>
+        <view class="content">
+          <image src="../../../images/habit/word.png"></image>
+          背单词
+        </view>
+        <view class="content">
+          <image src="../../../images/habit/breakfast.png"></image>
+          吃早餐
+        </view>
+        <view class="content">
+          <image src="../../../images/habit/cook.png"></image>
+          做饭
+        </view> -->
+      </swiper-item>
+      <swiper-item>
+        <view class="content">
+          <image src="../../../images/habit/running.png"></image>
+          晨跑
+        </view>
+        <view class="content">
+          <image src="../../../images/habit/jianshen.png"></image>
+          健身
+        </view>
+        <!-- <view class="content">
+          <image src="../../../images/habit/cook.png"></image>
+          家务
+        </view>
+        <view class="content">
+          <image src="../../../images/habit/swim.png"></image>
+          游泳
+        </view>
+        <view class='content'>
+          <image src="../../../images/habit/shopping.png"></image>
+          购物
+        </view>
+        <view class="content">
+          <image src="../../../images/habit/yoga.png"></image>
+          瑜伽
+        </view>
+        <view class="content">
+          <image src="../../../images/habit/bicycle.png"></image>
+          骑行
+        </view>
+        <view class='content'>
+          <image src="../../../images/habit/sit-ups.png"></image>
+          仰卧起坐
+        </view>
+        <view class='content'>
+          <image src="../../../images/habit/climbing.png"></image>
+          攀岩
+        </view>
+        <view class='content'>
+          <image src="../../../images/habit/pushups.png"></image>
+          俯卧撑
+        </view>
+        <view class='content'>
+          <image src="../../../images/habit/walking.png"></image>
+          饭后散步
+        </view> -->
+      </swiper-item>
+      <swiper-item>
+        <view class="content">
+          <image src="../../../images/habit/literature.png"></image>
+          看书
+        </view>
+        <view class="content">
+          <image src="../../../images/habit/draw.png"></image>
+          画画
+        </view>
+        <!-- <view class="content">
+          <image src="../../../images/habit/hand-with-pen.png"></image>
+          练字
+        </view>
+        <view class="content">
+          <image src="../../../images/habit/word.png"></image>
+          背单词
+        </view>
+        <view class="content">
+          <image src="../../../images/habit/code-file.png"></image>
+          写代码
+        </view>
+        <view class="content">
+          <image src="../../../images/habit/infinity.png"></image>
+          数学题
+        </view> -->
+      </swiper-item>
+      <swiper-item>
+        <view class="content">
+          <image src="../../../images/habit/getup.png"></image>
+          早起
+        </view>
+        <view class="content">
+          <image src="../../../images/habit/sleep.png"></image>
+          早睡
+        </view>
+        <!-- <view class="content">
+          <image src="../../../images/habit/baby-feet.png"></image>
+          泡脚
+        </view>
+        <view class="content">
+          <image src="../../../images/habit/water.png"></image>
+          喝水
+        </view>
+        <view class="content">
+          <image src="../../../images/habit/breakfast.png"></image>
+          吃早餐
+        </view>
+        <view class="content">
+          <image src="../../../images/habit/brush.png"></image>
+          刷牙
+        </view>
+        <view class="content">
+          <image src="../../../images/habit/smoke.png"></image>
+          戒烟
+        </view>
+        <view class="content">
+          <image src="../../../images/habit/drink.png"></image>
+          戒酒
+        </view> -->
+
+      </swiper-item>
+      <swiper-item>
+        <view class="content">
+          <image src="../../../images/habit/note.png"></image>
+          写日记
+        </view>
+        <view class="content">
+          <image src="../../../images/habit/cook.png"></image>
+          做饭
+        </view>
+        <!-- <view class="content">
+          <image src="../../../images/habit/shopping.png"></image>
+          购物
+        </view>
+        <view class="content">
+          <image src="../../../images/habit/temperature.png"></image>
+          测体温
+        </view>
+        <view class="content">
+          <image src="../../../images/habit/happy.png"></image>
+          微笑
+        </view> -->
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

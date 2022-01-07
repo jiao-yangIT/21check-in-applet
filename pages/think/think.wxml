@@ -1,0 +1,57 @@
+<view class="comment-detail-box">
+  <!-- 感想 -->
+  <view class="input-box">
+    <input class="input keyboard-input" value="{{keyboardInputValue}}" bindconfirm="submitComment" bindinput="bindCommentInput" placeholder="说点什么吧……" />
+  </view>
+
+<!-- 添加照片 -->
+  <view>
+    <image class="add-icon" src="../../images/icon/add-image.png" catchtap="sendMoreMsg"></image>
+  </view> 
+  <view class="send-more-box" hidden="{{!sendMoreMsgFlag}}">
+    <!--选择图片和拍照的按钮-->
+    <view class="send-more-btns-main">
+      <view class="more-btn-item" catchtap="upImg" data-category="album">
+        <view class="more-btn-main">
+          <image src="/images/icon/wx_app_upload_image.png"></image>
+        </view>
+        <text>照片</text>
+      </view>
+      <view class="more-btn-item" catchtap="upImg" data-category="camera">
+        <view class="more-btn-main">
+          <image src="/images/icon/wx_app_camera.png"></image>
+        </view>
+        <text>拍照</text>
+      </view>
+    </view>
+    <!--显示选择的图片-->
+    <view class="send-more-result-main">
+      <block wx:for="{{urlArr}}" wx:for-index="idx">
+        <!--如果删除其中一个，则对其添加deleting 样式；-->
+        <view class="file-box {{deleteIndex==idx?'deleting':''}}">
+          <view class="img-box">
+            <image src="{{item.url}}" mode="aspectFill"></image>
+            <icon class="remove-icon" type="cancel" size="23" color="#B2B2B2" catchtap="deleteImage" data-idx="{{idx}}" />
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class="submit-btn" catchtap="submitComment">发布</view>
+  <!-- <view>
+    <view class="message" wx:if="{{isShow}}">
+      <view class="category-item personal-info">
+        <view class="user-avatar">
+          <open-data type="userAvatarUrl"></open-data>
+        </view>
+        <view class="user-name">
+          <view class="user-nickname">
+            <open-data type="userNickName"></open-data>
+          </view>
+          <view class='date'>{{time}}</view>
+        </view>
+      </view>
+       <view>{{keyboardInputValue}}</view>
+    </view>
+  </view> -->
+</view>

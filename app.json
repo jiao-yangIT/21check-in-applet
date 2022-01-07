@@ -1,0 +1,42 @@
+{
+  "enablePullDownRefresh": true,
+  "pages": [
+    "pages/welcome/welcome",
+    "pages/life/life",
+    "pages/think/think",
+    "pages/habit/addhabit/addhabit",
+    "pages/habit/habit",
+    "pages/mine/mine",
+    "pages/habit/join/join",
+    "pages/mine/feedback/feedback",
+    "pages/index/index",
+    "pages/mine/device/device",
+    "pages/life/lifedetail/detail"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#C6E2FF"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/habit/habit",
+        "text": "生活习惯",
+        "iconPath": "images/icon/alarm-clock.png",
+        "selectedIconPath": "images/icon/alarm-clock (1).png"
+      },
+      {
+        "pagePath": "pages/life/life",
+        "text": "生活动态",
+        "iconPath": "images/icon/point-of-interest.png",
+        "selectedIconPath": "images/icon/point-of-interest (1).png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/icon/gender-neutral-user (2).png",
+        "selectedIconPath": "images/icon/gender-neutral-user (3).png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

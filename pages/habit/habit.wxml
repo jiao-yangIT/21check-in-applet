@@ -1,0 +1,32 @@
+<view class="container">
+  <view class='.category-item'>
+    <view class="personal-info">
+      <view class="user-avatar">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <view class="user-name">
+        <open-data type="userNickName"></open-data>
+      </view>
+    </view>
+    <view class="addhabit" catchtap='addhabit'>
+      <image src="/images/icon/add.png" class='addimg'></image>
+      <view class='hb'>习惯</view>
+    </view>
+  </view>
+
+  <view class='content' wx:if="{{show}}">
+    还没有添加任何习惯，去添加一个吧
+  </view>
+  <view class='flex' wx:if="{{dataList}}" bindtap='goDetail'>
+    <view class='con-img'>
+      <image class='img' src="../../images/habit/getup.png"></image>
+      <!-- <image class='img' src="../../../images/habit/sleep.png"></image> -->
+    </view>
+    <view class='con-con'>
+      <view class='text'>早起</view>
+      <view class='data'>已坚持{{data}}天</view>
+    </view>
+  </view>
+      <view class='bo-form'>----------已经到底啦----------</view>
+
+</view>

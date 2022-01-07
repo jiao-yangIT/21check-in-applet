@@ -1,0 +1,77 @@
+<view>
+  <swiper catchtap='onswipertap' indicator-dots='true' autoplay='true' interval="3000">
+    <swiper-item>
+      <image src="../../images/pic/21day.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="../../images/pic/basketball.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="../../images/pic/sleep.jpg"></image>
+    </swiper-item>
+  </swiper>
+  <view class='jingxuan'>
+    <view class="content" bindtap='daka'>
+      <image src="../../images/habit/getup.png"></image>
+      早起
+    </view>
+    <view class="content" bindtap='daka'>
+      <image src="../../images/habit/sleep.png"></image>
+      早睡
+    </view>
+    <view class="content">
+      <image src="../../images/habit/running.png"></image>
+      晨跑
+    </view>
+    <view class="content">
+      <image src="../../images/habit/word.png"></image>
+      背单词
+    </view>
+    <!-- <view class="content">
+        <image src="../../images/habit/breakfast.png"></image>
+        吃早餐
+      </view> -->
+    <view class="content">
+      <navigator url="../habit/addhabit/addhabit" hover-class="navigator-hover">更多</navigator>
+    </view>
+  </view>
+  <view>
+    <!-- <view class='refresh' hidden='{{refresh}}'>
+      <text>下拉刷新...</text>
+    </view>
+    <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style='height:{{scrollHeight}}px;' bindscrolltoupper="bindRefresh" bindscrolltolower="bindLoadMore"> -->
+    <view class="life-container" wx:for="{{rows}}" wx:for-item="rowItem">
+      <view class="life-author-date">
+        <open-data type="userAvatarUrl" class="pic"></open-data>
+        <view>
+          <open-data type="userNickName" class="name"></open-data>
+          <!-- <view wx:for="{{list}}" wx:for-item="item">
+            <view class='date'>{{item}}</view>
+          </view> -->
+          <view class='date'>{{rowItem.createdAt}}</view>
+        </view>
+      </view>
+      <view class='life-content'>
+        <text class="cat-content">{{rowItem.title}}</text>
+        <view>
+          <image class='contentimg' src="{{rowItem.picture[0].url}}" />
+        </view>
+      </view>
+      <view class="life-like">
+        <view catchtap='onUpTap'>
+          <image animation="{{animationUp}}" wx:if="{{post.upStatus}}" src="/images/icon/wx_app_like.png"></image>
+          <image animation="{{animationUp}}" wx:else src="/images/icon/wx_app_like.png" />
+          <text>{{rowItem.collect}}</text>
+        </view>
+        <!-- <image src="/images/icon/wx_app_view.png"></image>
+        <text>{{rowItem.cat}}</text> -->
+        <image src="/images/icon/wx_app_message.png"></image>
+        <text>{{rowItem.message}}</text>
+      </view>
+    </view>
+    <!-- </scroll-view>
+    <view>
+      <loading hidden="{{hidden}}">加载中...</loading>
+    </view> -->
+  </view>
+</view>

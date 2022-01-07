@@ -1,0 +1,35 @@
+
+.g-bda-userinfo {
+  padding-top: 50rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 160rpx;
+  height: 160rpx;
+  margin: 20rpx;
+  margin-bottom: 2rpx;
+}
+.userinfo-nickname{
+  color: #fff;
+}
+.message{
+margin: 30rpx;
+padding: 20rpx;
+}
+.title{
+  margin-top: 20rpx;
+  padding: 10rpx;
+}
+.message input{
+  border-top:1rpx solid rgb(163, 158, 158);
+  border-bottom:1rpx solid rgb(163, 158, 158);
+  padding: 20rpx
+}
+.message textarea{
+  border-top:1rpx solid rgb(163, 158, 158);
+  border-bottom:1rpx solid rgb(163, 158, 158);
+  padding: 20rpx
+}

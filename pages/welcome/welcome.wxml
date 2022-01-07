@@ -1,0 +1,7 @@
+<view class='container'>
+  <image class='avator' src='/images/logo.jpg'></image>
+  <text class="content">21天一个习惯的养成</text>
+  <view class='jump' catchtap='onjump'>
+    <text>进入打卡</text>
+  </view>
+</view>
