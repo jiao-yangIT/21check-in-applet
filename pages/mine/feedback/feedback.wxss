@@ -23,13 +23,12 @@ padding: 20rpx;
   margin-top: 20rpx;
   padding: 10rpx;
 }
-.message input{
-  border-top:1rpx solid rgb(163, 158, 158);
-  border-bottom:1rpx solid rgb(163, 158, 158);
+.message input, textarea {
+  margin-top: 10rpx;
+  border: 1rpx solid rgb(163, 158, 158);
+  border-radius: 6rpx;
   padding: 20rpx
 }
-.message textarea{
-  border-top:1rpx solid rgb(163, 158, 158);
-  border-bottom:1rpx solid rgb(163, 158, 158);
-  padding: 20rpx
+.weui-btn {
+  margin-top: 20rpx;
 }

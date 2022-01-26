@@ -11,26 +11,10 @@
     </swiper-item>
   </swiper>
   <view class='jingxuan'>
-    <view class="content" bindtap='daka'>
-      <image src="../../images/habit/getup.png"></image>
-      早起
+    <view class="content" bindtap='daka' wx:for="{{habbitTitle}}" wx:for-item="habit">
+      <image src="{{habit.image}}"></image>
+      <view>{{habit.name}}</view>
     </view>
-    <view class="content" bindtap='daka'>
-      <image src="../../images/habit/sleep.png"></image>
-      早睡
-    </view>
-    <view class="content">
-      <image src="../../images/habit/running.png"></image>
-      晨跑
-    </view>
-    <view class="content">
-      <image src="../../images/habit/word.png"></image>
-      背单词
-    </view>
-    <!-- <view class="content">
-        <image src="../../images/habit/breakfast.png"></image>
-        吃早餐
-      </view> -->
     <view class="content">
       <navigator url="../habit/addhabit/addhabit" hover-class="navigator-hover">更多</navigator>
     </view>
@@ -42,6 +26,7 @@
     <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style='height:{{scrollHeight}}px;' bindscrolltoupper="bindRefresh" bindscrolltolower="bindLoadMore"> -->
     <view class="life-container" wx:for="{{rows}}" wx:for-item="rowItem">
       <view class="life-author-date">
+      <!-- {{rowItem.createdAt}} -->
         <open-data type="userAvatarUrl" class="pic"></open-data>
         <view>
           <open-data type="userNickName" class="name"></open-data>
@@ -53,9 +38,9 @@
       </view>
       <view class='life-content'>
         <text class="cat-content">{{rowItem.title}}</text>
-        <view>
+        <!-- <view>
           <image class='contentimg' src="{{rowItem.picture[0].url}}" />
-        </view>
+        </view> -->
       </view>
       <view class="life-like">
         <view catchtap='onUpTap'>

@@ -5,9 +5,9 @@
   </view>
 
 <!-- 添加照片 -->
-  <view>
+  <!-- <view>
     <image class="add-icon" src="../../images/icon/add-image.png" catchtap="sendMoreMsg"></image>
-  </view> 
+  </view>  -->
   <view class="send-more-box" hidden="{{!sendMoreMsgFlag}}">
     <!--选择图片和拍照的按钮-->
     <view class="send-more-btns-main">

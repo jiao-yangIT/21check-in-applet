@@ -20,7 +20,7 @@ App({
       //调用登录接口 
       wx.login({
         success: function (res) {
-          var user = new Bmob.User(); //实例化         
+          var user = new Bmob.User(); //实例化
           user.loginWithWeapp(res.code).then(function (user) {
             if (user.get("nickName")) {
               //更新缓存中的openid
@@ -29,6 +29,7 @@ App({
               //*************保存用户其他信息，比如昵称头像之类的*****************
               wx.getUserInfo({
                 success: function (result) {
+                  console.log(result)
                   var nickName = result.userInfo.nickName;
                   var avatarUrl = result.userInfo.avatarUrl;
                   var u = Bmob.Object.extend("_User");
@@ -43,6 +44,7 @@ App({
                       result.save();
                     }
                   });
+                  console.log(result)
                 }
               });
               //*************保存用户其他信息，比如昵称头像之类的end*****************

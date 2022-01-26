@@ -15,7 +15,7 @@ Page({
       signDay: signDay
     })
     wx.switchTab({
-      url: '../habit/habit',
+      url: '../index/index',
     })
     wx.showToast({
       title: '签到成功',

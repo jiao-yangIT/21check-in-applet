@@ -1,6 +1,7 @@
 {
   "enablePullDownRefresh": true,
   "pages": [
+    "pages/login/login",
     "pages/welcome/welcome",
     "pages/life/life",
     "pages/think/think",

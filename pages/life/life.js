@@ -11,6 +11,13 @@ Page({
     urlArr:[],
     listItem:'',
     picture:'',
+    habbitTitle: [
+      {name: '早起', image: '/images/habit/getup.png'},
+      {name: '早睡', image: '/images/habit/sleep.png'},
+      {name: '晨跑', image: '/images/habit/running.png'},
+      {name: '背单词', image: '/images/habit/word.png'},
+      {name: '吃早餐', image: '/images/habit/breakfast.png'}
+    ]
   },
   /**
      * 页面相关事件处理函数--监听用户下拉动作
@@ -25,7 +32,6 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    console.log("上拉")
     wx.showLoading({
       title: 'loading...',
     })
@@ -86,7 +92,6 @@ Page({
     title.descending("createdAt")
     title.find({
       success: function (result) {
-        console.log('result', result)
         var arr = [];
         var list = [];
         if (result.length > 0) {
@@ -98,8 +103,8 @@ Page({
           }
         }
         // list.push(listItem)
-        console.log(3, list)
         result.forEach(function (item) {
+          // console.log(item)
           arr.push({
             list: list,
             // createdAt: result[0].createdAt,
@@ -111,6 +116,7 @@ Page({
             message: item.get('message') || 0,
           })
         })
+        console.log(arr)
         // console.log(2,arr[1].picture[0].url)
         // console.log(4, result[0].createdAt)
         // console.log(5, arr)
@@ -125,7 +131,6 @@ Page({
         } else {
           wx.hideLoading()
         }
-        console.log(111, "下拉");
         // The object was retrieved successfully.
       },
       error: function (result, error) {

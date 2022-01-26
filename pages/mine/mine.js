@@ -10,17 +10,11 @@ Page({
       avatarUrl: "",//用户头像
       nickName: "",//用户昵称
     },
-    cache: [
-      { iconurl: '/images/icon/wx_app_clear.png', title: '缓存清理', tap: 'clearCache' }
-    ],
-    device: [
-      { iconurl: '/images/icon/wx_app_cellphone.png', title: '系统信息', tap: 'showSystemInfo' },     
-    ],
-    fankui: [
-      { iconurl: '/images/icon/wx_app_message.png', title: '反馈建议', tap: 'fankui' },
-    ],
-    about: [
-      { iconurl: '/images/icon/about.png', title: '关于本程序', tap: 'about' },
+    mineSetting: [
+      { note: 'cache', iconurl: '/images/icon/wx_app_clear.png', title: '缓存清理', tap: 'clearCache' },
+      { note: 'device', iconurl: '/images/icon/wx_app_cellphone.png', title: '系统信息', tap: 'showSystemInfo' },
+      { note: 'fankui', iconurl: '/images/icon/wx_app_message.png', title: '反馈建议', tap: 'fankui' },
+      { note: 'about', iconurl: '/images/icon/about.png', title: '关于本程序', tap: 'about' },
     ],
     api: [
       { iconurl: '/images/icon/wx_app_list.png', title: '下载pdf、word文档', tap: 'downloadDocumentList' },

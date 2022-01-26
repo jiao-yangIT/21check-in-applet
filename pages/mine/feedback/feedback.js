@@ -33,7 +33,7 @@ Page({
           success: function(result) {
             // 添加成功，返回成功之后的objectId（注意：返回的属性名字是id，不是objectId），你还可以在Bmob的Web管理后台看到对应的数据
             common.showModal('保存反馈成功，点击确定返回。', '提示', function() {
-              wx.navigateBack();
+              wx.navigateBack(-1);
             });
 
             // wx.navigateBack();

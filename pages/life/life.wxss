@@ -11,16 +11,20 @@ swiper image {
 .jingxuan {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   border-bottom: 1rpx solid rgb(102, 99, 99);
 }
 
 .content {
-  padding: 40rpx 10rpx 20rpx 10rpx;
+  display: flex;
+  align-items: center;
+  padding: 40rpx 0 20rpx;
 }
 
 .content image {
-  width: 40rpx;
-  height: 40rpx;
+  padding: 0 5rpx;
+  width: 35rpx;
+  height: 35rpx;
 }
 
 .life-container {
@@ -40,8 +44,8 @@ swiper image {
 }
 
 .life-author-date .pic {
-  width: 130rpx;
-  height: 130rpx;
+  width: 110rpx;
+  height: 110rpx;
 }
 
 .life-author-date .name {
